@@ -46,23 +46,18 @@ EOF
 fi
 
 exec < /dev/tty
-echo "saffsafasfdsf";
-#read -p "Enter 'y' to remove all \"SUDEEP\" lines from every .java file. [blank to proceed with normal commit]" userin
-read -p "asf:" userin
-echo $userin;
+read -p "Enter 'y' to remove all \"amzn\" lines from every .java file. [blank to proceed with normal commit]" userin
 exec <&-
 
 if [ "$userin" = "Y" ] || [ "$userin" = "y" ]
 then
-       echo "sfsfasfd";
-	files=$(find . -type f -name "*.txt")
+       files=$(find . -type f -name "*.txt")
 	for x in $files
 	 do
-	    grep -v "SUDEEP" $x > hi && mv hi $x;
+	    grep -v "amzn" $x > hi && mv hi $x;
 	 done
 
 fi
-echo "aaaaaaaaaaa"
 exec git add -A
 
 # If there are whitespace errors, print the offending file names and fail.
