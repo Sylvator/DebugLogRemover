@@ -51,7 +51,7 @@ exec <&-
 
 if [ "$userin" = "Y" ] || [ "$userin" = "y" ]
 then
-       files=$(find . -type f -name "*.txt")
+       files=$(find . -type f -name "*.java")
 	for x in $files
 	 do
 	    grep -v "amzn" $x > hi && mv hi $x;
